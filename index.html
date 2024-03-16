@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX de PW2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p id="menu">
+        <h1>This is varzea</h1>
+        </p>
+    </header>
+
+    <div class="content">
+        <div class="slides">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+
+            <div class="slide s1">
+                <img src="imagens/vz1.jpg" alt="várzea">
+            </div>
+            <div class="slide">
+                <img src="imagens/vz2.jpg" alt="várzea">
+            </div>
+            <div class="slide">
+                <img src="imagens/vz4.jpg" alt="várzea">
+            </div>
+            <div class="slide">
+                <img src="imagens/vz8.jpg" alt="várzea">
+            </div>
+            <div class="slide">
+                <img src="imagens/vz10.jpg" alt="várzea">
+            </div>
+        </div>
+
+        <div class="navigation">
+            <label class="bar" for="slide1"></label>
+            <label class="bar" for="slide2"></label>
+            <label class="bar" for="slide3"></label>
+            <label class="bar" for="slide4"></label>
+            <label class="bar" for="slide5"></label>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2>Áudios de arara da varzea <br>
+                Qual membro da varzea ira tirar?
+            </h2>
+            <p>Digite um número de 1 a 13</p>
+            <input type="number" id="arara">
+            <button class="bnt" onclick="VerificarNumero()">Verificar</button>
+            <button class="bnt" onclick="Limpar()" value="limpar">Limpar</button>
+            <p id="mensagem"></p>
+            <div id="audio"></div>
+            <div>
+                <h2>
+                    Vezes que você ouviu arara
+                </h2>
+            </div>
+            <p id="contagem"></p>
+        </div> 
+    </div>
+    <footer>
+        <p>
+            André Takao Yamamoto - @Todos os direitos reservados
+            <br>
+            Trabalho acadêmico - sem fins lucrativos
+        </p>
+    </footer>
+</body>
+</html>
+<script>
+    let cont = 0;
+        
+    function VerificarNumero(){
+    var arara = parseInt(document.getElementById("arara").value);
+    var mensagem = document.getElementById("mensagem");
+    var numero = "";
+    var audio = document.getElementById("audio");
+    var contagem = document.getElementById("contagem");
+
+    cont++;
+
+    if(arara == 1){
+        mensagem.innerHTML = "Vitor";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araravitor.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if (arara == 2){
+        mensagem.innerHTML = "Mago";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araramago.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if(arara == 3){
+        mensagem.innerHTML = "Lacerda";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araralas.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if(arara == 4){
+        mensagem.innerHTML = "Madera";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araramadera.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if(arara == 5){
+        mensagem.innerHTML = "Vini Bubu";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/ararabubu.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if(arara == 6){
+        mensagem.innerHTML = "Padre";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/ararapadre.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if(arara == 7){
+        mensagem.innerHTML = "Ewerson";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araraewer.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if(arara == 8){
+        mensagem.innerHTML = "Estevan";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araraestevam.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if(arara == 9){
+        mensagem.innerHTML = "Capixaba";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araracapixa.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    else if(arara == 10){
+        mensagem.innerHTML = "Marcão";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araramarcao.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    if(arara == 11){
+        mensagem.innerHTML = "PH";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/araraph.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    if(arara == 12){
+        mensagem.innerHTML = "Baiano";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/ararabaiano.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    if(arara == 13){
+        mensagem.innerHTML = "Takao";
+        const audioContainer = document.getElementById('audio');
+        const newAudio = document.createElement('audio');
+        newAudio.src = 'audios/ararajapones.mp3'; 
+        newAudio.controls = true; 
+        audioContainer.appendChild(newAudio);
+        contagem.innerHTML = cont;
+    }
+    }
+
+    function Limpar(){
+    var arara = document.getElementById("arara");
+    var mensagem = document.getElementById("mensagem");
+    var numero = "";
+    var audio = document.getElementById("audio");
+
+    mensagem.innerHTML = '';
+    audio.innerHTML = '';
+    arara.value = ''
+    }
+    
+    
+</script>
